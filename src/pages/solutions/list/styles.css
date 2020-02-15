@@ -1,7 +1,21 @@
+
 .list {
     max-width: 700px;
     margin: 20px auto 0;
     padding: 0 20px;
+}
+
+.level-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+.white-line {
+    width: 45%;
+    height: 1px;
+    background: white;
+    margin-top:.1rem;
 }
 
 .list article {

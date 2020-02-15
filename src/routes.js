@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Main from './pages/main';
+import List from './pages/solutions/list';
+import Login from './pages/login';
 
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <Route exact path="/" component={Main}/>
+            <Route exact path="/" component={Login}/>
+            <Route path="/solutions" component={List}/>
         </Switch>
     </BrowserRouter>
 )

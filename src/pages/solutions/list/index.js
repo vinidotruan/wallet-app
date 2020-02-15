@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-export default class Main extends Component {
+export default class List extends Component {
 
     state = {
         list: []
@@ -44,17 +44,22 @@ export default class Main extends Component {
         return(
             <div className="list">
                 { group.map((solutions, key) => (
-                    solutions.map(solution =>
-                    <article key={solution.id}>
-                        <strong> {solution.title} </strong>
-                        <p> {solution.resume}</p>
-                        <Link to={`/solutions/${solution.id}`}> Acessar </Link>
-                    </article>
-                    )
+                    <div key={key}>
+                        <div className="level-wrapper">
+                            <div className="white-line"></div>
+                            <div className="solution-level">Nível{key}</div>
+                            <div className="white-line"></div>
+                        </div>
+
+                        {solutions.map(solution =>
+                        <article key={solution.id}>
+                            <strong> {solution.title} </strong>
+                            <p> {solution.resume}</p>
+                            <Link to={`/solutions/${solution.id}`}> Acessar </Link>
+                        </article>
+                        )}
+                    </div>    
                 ))}
-                {
-                    
-                }
             </div>
         )
     }
