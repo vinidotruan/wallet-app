@@ -1,61 +1,158 @@
+.list {    
+    padding: 1rem 2rem;
+    background-color: #EAEAEA !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-.list {
-    max-width: 700px;
-    margin: 20px auto 0;
-    padding: 0 20px;
+.list .user .points-wrapper{   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #7B2CD6;
+    background-image: linear-gradient(45deg, #7B2CD6,#4CDCBC);
+    border-radius: 1.6rem;
+    padding: .2rem;
+    margin-bottom: 1rem;
+    width: 4.2rem;
+}
+
+.list .user .points-wrapper .content {   
+    display: flex;
+    background: white;
+    border-radius: 1.6rem;
+    padding: .4rem;
+    font-size: 1.2rem;
+}
+
+.list .user .points{    
+    color:#7B2CD6;
+}
+
+.list .user .coin{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 1.4rem;
+    background: #e2e20c;
+    margin-right: .1rem;
+}
+
+.list .title {
+    font-size: 2.8rem;
+    color:#7B2CD6;
 }
 
 .level-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-bottom: 1.2rem;
 }
-.white-line {
-    width: 45%;
-    height: 1px;
-    background: white;
-    margin-top:.1rem;
+
+.level-wrapper .solution-level {
+    font-size: 1.8rem;
+    margin-top: 1rem;
 }
+.level-wrapper.blocked .solution-level {
+    color:#bbbbbb;
+}
+.level-wrapper:not(.blocked) .solution-level {
+    color:#7B2CD6;
+}
+
 
 .list article {
-    background: #000000;
-    border: 1px solid #2f32da;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 1.6rem;
+    padding: .4rem;
+    margin-bottom: 1rem;
+    min-height: 12rem;
 }
 
-.list article strong {
+.list article:not(.blocked)  {
+    background: #7B2CD6;
+    background-image: linear-gradient(45deg, #7B2CD6,#4CDCBC);
+}
+
+.list article.blocked  {
+    background: #acacac;
+}
+
+
+.list article .content {
+    border-radius: 1.3rem;
+    padding: 1rem;
+    min-height: 12rem;
+}
+
+.list article:not(.blocked) .completed.content {
+    background: white;
+}
+
+.list article span.title { 
+    font-size: 1.5rem;
+}
+.list article.blocked .content span.title {
+    color:#9e9d9d;
+}
+
+.list article:not(.blocked) .completed.content span.title {
+    color: #571B9C;
+}
+.list article:not(.blocked) .incomplete.content span.title {
     color: white;
 }
 
 .list article p {
-    font-size: 16px;
-    color: #999;
-    margin-top: 5px;
-    line-height: 24px;
+    font-size: 1rem;
+    margin-top: .5rem;
+    line-height: 1.4rem;
 }
 
-.list article a {
-    height: 42px;
-    border-radius: 5px;
-    border: 2px solid #2f32da;
-    background: none;
-    margin-top: 10px;
-    color: #2f32da;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
+.list article.blocked .content p {
+    color:#9e9d9d;
+}
+.list article:not(.blocked) .completed.content p {
+    color: #571B9C;
+}
+.list article:not(.blocked) .incomplete.content p {
+    color:white;
+}
+
+.list article .content .rewards { 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .2s
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 1rem
+}
+.list article.blocked .content .rewards {
+    color: #9e9d9d;
+}
+.list article:not(.blocked) .completed.content .rewards {
+    color: #571B9C;
+}
+.list article:not(.blocked) .incomplete.content .rewards {
+    color: white;
 }
 
-.list article a:hover {
-    background-color: #2f32da;
-    color: #fff;
+.list article .content .rewards .reward{
+    font-size: 1.3rem;
+}
+.list article .content .rewards .coin{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 1.4rem;
+    margin-right: .1rem;
+}
+
+.list article:not(.blocked) .content .rewards .coin {
+    background: #e2e20c;
+}
+.list article.blocked .content .rewards .coin {
+    background: #9e9d9d;
 }
 
 .list .actions {
