@@ -1,7 +1,6 @@
 import React from 'react';
 import Routes from './routes';
 import FooterBar from './components/FooterBar';
-import "./styles/global";
 import './styles.css';
 
 function App() {

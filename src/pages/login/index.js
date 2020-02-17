@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Form, Container } from "./styles";
-import { Link } from 'react-router-dom';
+
+import logoFacebook from '../../assets/icons/facebookicon.png';
+import logoGoogle from '../../assets/icons/googleicon.png';
+import logoLinkedin from '../../assets/icons/linkedinicon.png';
+
+import './styles.css';
 
 export default class Login extends Component {
 
@@ -14,25 +18,29 @@ export default class Login extends Component {
 
     render() {
         return (
-            <Container>
-                <Form onSubmit={this.handleSignIn}>
-                {/* <img src={Logo} alt="Airbnb logo" /> */}
-                {/* {this.state.error && <p>{this.state.error}</p>} */}
+            <form className="login-form" onSubmit={this.handleSignIn}>
+                <h1>LOGIN</h1>
                 <input
                     type="email"
-                    placeholder="Endereço de e-mail"
+                    placeholder="EMAIL"
                     onChange={e => this.setState({ email: e.target.value })}
                 />
                 <input
                     type="password"
-                    placeholder="Senha"
+                    placeholder="SENHA"
                     onChange={e => this.setState({ password: e.target.value })}
                 />
-                <button type="submit">Entrar</button>
-                <hr />
-                <Link to="/signup">Criar conta grátis</Link>
-                </Form>
-            </Container>
+                <span className="forward-password">ESQUECI MINHA SENHA</span>
+                <button type="submit">ENTRAR</button>
+                <span className="or-access">
+                    OU ACESSE POR
+                </span>
+                <div className="social-media-login">
+                    <img src={logoGoogle} alt="teste"/>
+                    <img src={logoFacebook} alt="teste"/>
+                    <img src={logoLinkedin} alt="teste"/>
+                </div>
+            </form>
         );
     }
 }
