@@ -25,7 +25,7 @@
 
 .list .user .points-wrapper .content {   
     display: flex;
-    background: white;
+    background: #EAEAEA;
     border-radius: 1.6rem;
     padding: .4rem;
     font-size: 1.2rem;
@@ -96,7 +96,7 @@
 }
 
 .list article:not(.blocked) .completed.content {
-    background: white;
+    background: #EAEAEA;
 }
 
 .list article span.title { 

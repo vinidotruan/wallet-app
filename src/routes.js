@@ -8,6 +8,7 @@ import Welcome from './pages/welcome';
 import FooterBar from './components/FooterBar';
 import Profile from './pages/profile';
 import Edit from './pages/profile/edit';
+import Plans from './pages/plans';
 
 const Routes = () => (
     <div>
@@ -16,6 +17,7 @@ const Routes = () => (
             <Route exact path="/" component={ Welcome }/>
             <Route path="/login" component={ Login }/>
             <Route path="/signup" component={ Signup }/>
+            <Route path="/plans" component={ Plans }/>
             <Route path="/profile/edit" component={ Edit } />
 
             <Route path="/profile" render={(props) =>
