@@ -19,8 +19,8 @@ export default class Login extends Component {
         e.preventDefault();
         const { email, password } = this.state;
         try {
-            await api.post('/login', { email, password });
-            this.props.history.push('/home');
+            await api.post('login', { email, password });
+            this.props.history.push('/solutions');
         } catch (exception) {
             // tratar erro
         }
