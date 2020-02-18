@@ -1,0 +1,27 @@
+footer.main-footer {
+    background-color: #F3F3F3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10%;
+}
+
+footer.main-footer .icon-collection {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer.main-footer .icon-collection img {
+    width: 2.4rem;
+    padding-top: 0.7rem;
+}
+footer.main-footer .icon-collection .solution {
+    background-image: linear-gradient(45deg, #7B2CD6,#4CDCBC);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 3rem;
+}

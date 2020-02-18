@@ -1,0 +1,61 @@
+.solution-detail {    
+    padding: 1rem 2rem;
+    background-color: #EAEAEA !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#7B2CD6;
+    margin-bottom: 2rem;
+}
+
+.solution-detail a {
+    align-self: flex-start;
+}
+.solution-detail a img.arrow {
+    width: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.solution-detail .title {
+    font-size: 2rem;
+    font-weight: 600;
+    color:#7B2CD6;
+}
+
+.solution-detail .content {
+    font-size: 1.4rem;
+    text-align: justify;
+    margin-top: 1.4rem;
+}
+
+.solution-detail .button {
+    width: 50%;
+    font-size: 1rem;
+    font-weight:400;
+    color: white;
+    background-image: linear-gradient( to top right,#7B2CD6,#4CDCBC);
+    align-self: flex-end;
+    margin-top: 2rem;
+}
+
+.solution-detail .coin{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1.4rem;
+    margin-right: .1rem;
+    background: #e2e20c;
+}
+
+.solution-detail .rewards { 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 1rem
+}
+
+.solution-detail .rewards {
+    color: #571B9C;
+}
+

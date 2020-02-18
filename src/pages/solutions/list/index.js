@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 import lupa from '../../../assets/icons/lupa.svg';
 
@@ -36,6 +37,7 @@ export default class List extends Component {
     }
 
     render() {
+
         const { list, user } = this.state;
 
         list.sort((a,b) => a.level - b.level)
@@ -55,7 +57,10 @@ export default class List extends Component {
                     </div>
                     <div className="configuration"></div>
                 </div>
-                <span className="title"> SOLUÇÕES</span>
+                <span className="title">
+                    SOLUÇÕES
+                    <img className="search-image" src={lupa}/>
+                </span>
                 { group.map((solutions, key) => (
                     <div key={key}>
                         <div className={(user.level !== key? 'blocked ': '')+"level-wrapper"} >
@@ -65,16 +70,18 @@ export default class List extends Component {
                         </div>
 
                         {solutions.map(solution =>
-                        <article key={solution.id} className={(user.level !== key)? 'blocked': ''}>
-                            <div className={(solution.completed? 'completed ': 'incomplete ')+"content"}>
-                                <span className="title"> {solution.title.toUpperCase()} </span >
-                                <p>{solution.resume}</p>
-                                <div className="rewards">
-                                    <div className="coin"></div>
-                                    <span className="reward">{solution.reward}</span>
+                        <Link to={`/solutions/${solution.id}`} key={solution.id} >
+                            <article className={(user.level !== key)? 'blocked': ''}>
+                                <div className={(solution.completed? 'completed ': 'incomplete ')+"content"}>
+                                    <span className="title"> {solution.title.toUpperCase()} </span >
+                                    <p>{solution.resume}</p>
+                                    <div className="rewards">
+                                        <div className="coin"></div>
+                                        <span className="reward">{solution.reward}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </Link>
                         )}
                     </div>    
                 ))}
