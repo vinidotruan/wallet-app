@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import api from '../../services/api';
+
 import logoFacebook from '../../assets/icons/facebookicon.png';
 import logoGoogle from '../../assets/icons/googleicon.png';
 import logoLinkedin from '../../assets/icons/linkedinicon.png';
@@ -10,11 +12,22 @@ export default class Login extends Component {
 
     state = {
         user: {
-            login: '',
+            email: '',
             password: ''
         }
     }
 
+    async handleSignIn(e) {
+        e.preventDefault();
+
+        const email = this.state.user.email;
+        const password = this.state.user.password;
+        try {
+            await api.post('/register', { email, password });
+        } catch (exception) {
+
+        }
+    }
 
     render() {
         return (
@@ -23,7 +36,7 @@ export default class Login extends Component {
                 <input
                     type="email"
                     placeholder="EMAIL"
-                    onChange={e => this.setState({ email: e.target.value })}
+                    onChange={e => this.setState({ useremail: e.target.value })}
                 />
                 <input
                     type="password"
@@ -36,9 +49,9 @@ export default class Login extends Component {
                     OU ACESSE POR
                 </span>
                 <div className="social-media-login">
-                    <img src={logoGoogle} alt="teste"/>
-                    <img src={logoFacebook} alt="teste"/>
-                    <img src={logoLinkedin} alt="teste"/>
+                    <img src={logoGoogle} alt="teste" />
+                    <img src={logoFacebook} alt="teste" />
+                    <img src={logoLinkedin} alt="teste" />
                 </div>
             </form>
         );
