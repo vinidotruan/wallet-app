@@ -6,17 +6,6 @@ form.signup-form {
     margin-top:20%;
 }
 
-form.signup-form input {
-    margin-top: 1.5rem;
-    color:#D0D0D0;
-}
-
-form.signup-form input::placeholder {
-    padding-left: 1rem;
-    font-size: 1rem;
-    color:#D0D0D0;
-}
-
 form.signup-form .social-media-signup {
     display: flex;
     margin-left: 5rem;

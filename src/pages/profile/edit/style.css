@@ -1,0 +1,18 @@
+.profile.edit {
+    display: flex;
+}
+
+.profile.edit button {
+   font-size: 1.4rem;
+   margin-top:4rem;
+   margin-bottom: 20rem;
+}
+
+.profile.edit a {
+    align-self: flex-start;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.profile.edit a img.arrow {
+    width: 2.5rem;
+}

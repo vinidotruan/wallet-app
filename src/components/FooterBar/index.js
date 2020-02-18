@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 import Forum from '../../assets/icons/forum.svg';
@@ -14,15 +15,21 @@ export default class FooterBar extends Component {
         return(
             <footer className="main-footer">
                 <div className="icon-collection">
-                    <div className="forum">
-                        <img src={ props?.location?.pathname === '/forum' ? ForumWhite : Forum } />
-                    </div>
-                    <div className="solution">
-                        <img src={ props?.location?.pathname === '/solutions' ? SolutionsWhite : Solutions } />
-                    </div>
-                    <div className="profile">
-                        <img src={ props?.location?.pathname === '/profile' ? ProfileWhite : Profile } />
-                    </div>
+                    <Link to="/forum">
+                        <div className={(props?.location?.pathname === '/forum' ? 'active' : '')+ ' forum'}>
+                            <img src={ props?.location?.pathname === '/forum' ? ForumWhite : Forum } />
+                        </div>
+                    </Link>
+                    <Link to="/solutions">
+                        <div className={(props?.location?.pathname === '/solutions' ? 'active' : '')+ ' solution'}>
+                            <img src={ props?.location?.pathname === '/solutions' ? SolutionsWhite : Solutions } />
+                        </div>
+                    </Link>
+                    <Link to="/profile">                    
+                        <div className={ (props?.location?.pathname === '/profile' ? 'active' : '')+' profile'}>
+                            <img src={ props?.location?.pathname === '/profile' ? ProfileWhite : Profile } />
+                        </div>
+                    </Link>
                 </div>
             </footer>
 

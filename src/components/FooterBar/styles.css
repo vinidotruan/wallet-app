@@ -4,6 +4,7 @@ footer.main-footer {
     align-items: center;
     justify-content: space-between;
     min-height: 10%;
+    transition: .3s;
 }
 
 footer.main-footer .icon-collection {
@@ -17,9 +18,15 @@ footer.main-footer .icon-collection {
 
 footer.main-footer .icon-collection img {
     width: 2.4rem;
-    padding-top: 0.7rem;
 }
-footer.main-footer .icon-collection .solution {
+
+footer.main-footer .icon-collection .profile.active img {
+    margin-left: .1rem;
+}
+footer.main-footer .icon-collection .solution.active img {
+    margin-top: .8rem;
+}
+footer.main-footer .icon-collection .active {
     background-image: linear-gradient(45deg, #7B2CD6,#4CDCBC);
     width: 4rem;
     height: 4rem;
