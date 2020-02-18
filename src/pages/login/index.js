@@ -11,17 +11,13 @@ import './styles.css';
 export default class Login extends Component {
 
     state = {
-        user: {
-            email: '',
-            password: ''
-        }
+        email: '',
+        password: ''
     }
 
-    async handleSignIn(e) {
+    handleSignIn = async e => {
         e.preventDefault();
-
-        const email = this.state.user.email;
-        const password = this.state.user.password;
+        const { email, password } = this.state;
         try {
             await api.post('/register', { email, password });
         } catch (exception) {
@@ -36,7 +32,7 @@ export default class Login extends Component {
                 <input
                     type="email"
                     placeholder="EMAIL"
-                    onChange={e => this.setState({ useremail: e.target.value })}
+                    onChange={e => this.setState({ email: e.target.value })}
                 />
                 <input
                     type="password"
